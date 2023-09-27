@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "TheJamsil5Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-style: none;
+  scroll-behavior: smooth;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  word-break: keep-all;
+  color: #000;
+  min-width: 320px;
+  font-style: normal;
+  user-select: none;
+}
+#wrap {
+  width: 100%;
+  position: relative;
+}
