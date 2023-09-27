@@ -349,7 +349,7 @@ header .inner {
 .visual-box .visual-inner {
   position: relative;
   display: block;
-  margin-left: 10%;
+  margin-left: 40%;
 }
 .visual-box .visual-inner a {
   position: absolute;
@@ -357,7 +357,7 @@ header .inner {
 }
 .visual-phone {
   position: absolute;
-  right: 10%;
+  left: 12%;
   width: 300px;
   height: 600px;
   /* height: 700px; */
@@ -416,14 +416,24 @@ header .inner {
   background-color: #34c987;
 }
 /* sw-visual 콘트롤 */
+.control-wrap{
+  position: relative;
+  display: flex;
+  background-color: aqua;
+  width: 50%;
+  height: auto;
+  margin-top: -10%;
+  margin-left: 50%;
+}
+
 .sw-visual-control {
-  position: absolute;
+  /* position: absolute; */
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   bottom: calc(50% - 370px);
   /* top: 50% ; */
   display: flex;
-  width: 100%;
+  width: 40%;
   max-width: 1420px;
   z-index: 9;
 }
@@ -450,9 +460,9 @@ header .inner {
   opacity: 1;
 }
 .sw-visual-pg {
-  position: absolute;
+  /* position: absolute; */
   left: 75%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   top: calc(50% + 320px);
   width: 100%;
   z-index: 9;
