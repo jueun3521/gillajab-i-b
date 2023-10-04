@@ -125,7 +125,7 @@ menuToggleBtn.addEventListener("click", function () {
   //3.li에 html로 작성할 글자를 생성한다.
   let swVisualHtml = ``;
   for (let i = 0; i < swSlideCount; i++) {
-    swVisualHtml = swVisualHtml + `<li>${i + 1}</li>`;
+    swVisualHtml = swVisualHtml + `<li></li>`;
   }
   // 4.html을 추가한다
   swSlidePgUl.innerHTML = swVisualHtml;
