@@ -1972,6 +1972,7 @@ footer {
 footer .inner {
   position: relative;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   padding: 0;
