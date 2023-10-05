@@ -77,10 +77,7 @@ body {
   transition: color 0.3s ease; /* Add a smooth transition */
 }
 
-/* Style for the active modal menu item */
-.modal-menu a.active {
-  color: #34c987; /* Set the menu item color for the active section */
-}
+
 /* 헤더 */
 
 header {
@@ -1561,7 +1558,6 @@ header .inner {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  /* background-color: #f3f3f3; */
 }
 .review .inner {
   position: relative;
@@ -1783,182 +1779,79 @@ header .inner {
 
 /* ====================================================== */
 /* 하단배너 */
-.bt-banner {
-  width: 100%;
-  height: 200px;
-}
-.btb-left {
-  width: calc(100% / 2);
-  height: 100%;
-  float: left;
-  display: block;
+.bt-banner{
   position: relative;
-}
-.btb-left img {
-  width: 100%;
-  height: 100%;
-}
-.btb-left p {
-  position: absolute;
-  top: 20%;
-  left: 8%;
-  color: #fff;
-  font-size: 26px;
-  font-weight: 600;
-}
-.btb-left button {
-  position: absolute;
-  bottom: 20%;
-  right: 8%;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 550;
-  border: 0.0625rem solid #fff;
-  border-radius: 50px;
-  width: 260px;
-  height: 50px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-.btb-left button:hover {
-  color: #34c987;
-  border: 0.0625rem solid #34c987;
-}
-.btb-right {
-  width: calc(100% / 2);
-  height: 100%;
-  float: right;
   display: block;
+}
+.bt-banner-bg{
   position: relative;
-}
-.btb-right img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: 400px;
+  bottom: 0;
+  left: 0;
+  background: url(../images/index/bottom-bt-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.btb-right p {
+.bt-banner-box{
+  position: relative;
+  display: block;
+  width: 70%;
+  height: 400px;
+  margin: 0 auto;
+}
+.bt-banner-txt{
   position: absolute;
-  top: 20%;
-  left: 8%;
-  color: #fff;
-  font-size: 26px;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.bt-banner-txt-title{
+  position: relative;
+  display: block;
+  font-size: 30px;
   font-weight: 600;
-}
-.btb-right button {
-  position: absolute;
-  bottom: 20%;
-  right: 8%;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 550;
-  border: 0.0625rem solid #fff;
-  border-radius: 50px;
-  width: 260px;
-  height: 50px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-.btb-right button:hover {
   color: #34c987;
-  border: 0.0625rem solid #34c987;
+  margin-top: 50px;
+  line-height: 1.2;
 }
+.bt-banner-btn{
+  position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0 auto; */
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.bt-banner-txt p:nth-child(2){
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 100;
+  margin-top: 5%;
+}
+.bt-banner-btn a{
+  position: relative;
+  display: block;
+}
+.bt-banner-btn a button:hover{
+  color: #34c987;
+  border: 1px solid #34c987;
+}
+.bt-banner-btn a button{
+  background: none;
+  border: 1px solid#fff;
+  color: #fff;
+  padding: 20px 20px;
+  width: 300px;
+  font-weight: 600;
+  font-size: 20px;
 
-@media all and (max-width: 1000px) {
-  .btb-left p {
-    font-size: 2.5vw;
-  }
-  .btb-left button {
-    width: 25vw;
-    font-size: 1.5vw;
-  }
-  .btb-left button i {
-    font-size: 1.5vw;
-  }
-
-  .btb-right p {
-    font-size: 2.5vw;
-  }
-  .btb-right button {
-    width: 25vw;
-    font-size: 1.5vw;
-  }
-  .btb-right button i {
-    font-size: 1.5vw;
-  }
 }
-@media all and (max-width: 768px) {
-  .btb-left p {
-    font-size: 2.6042vw;
-  }
-  .btb-left button {
-    width: 32.5521vw;
-    font-size: 1.9531vw;
-  }
-  .btb-left button i {
-    font-size: 1.9531vw;
-  }
-  .btb-right p {
-    font-size: 2.6042vw;
-  }
-  .btb-right button {
-    width: 32.5521vw;
-    font-size: 1.9531vw;
-  }
-  .btb-right button i {
-    font-size: 1.9531vw;
-  }
-}
-
-@media all and (max-width: 480px) {
-  .btb-left p {
-    font-size: 3.9667vw;
-    margin-right: 1%;
-  }
-  .btb-left button {
-    width: 41.6667vw;
-    font-size: 3.125vw;
-  }
-  .btb-left button i {
-    font-size: 3.125vw;
-  }
-  .btb-right p {
-    font-size: 3.9667vw;
-    margin-right: 1%;
-  }
-  .btb-right button {
-    width: 41.6667vw;
-    font-size: 3.125vw;
-  }
-  .btb-right button i {
-    font-size: 3.125vw;
-  }
-}
-@media all and (max-width: 380px) {
-  .btb-left p {
-    font-size: 3.9368vw;
-    margin-right: 1%;
-  }
-  .btb-left button {
-    width: 44.7368vw;
-    font-size: 3.6842vw;
-  }
-  .btb-left button i {
-    font-size: 3.6842vw;
-  }
-  .btb-right p {
-    font-size: 3.9368vw;
-    margin-right: 1%;
-  }
-  .btb-right button {
-    width: 44.7368vw;
-    font-size: 3.6842vw;
-  }
-  .btb-right button i {
-    font-size: 3.6842vw;
-  }
-}
-
 /* ====================================================== */
 /* footer */
 footer {
@@ -1972,9 +1865,9 @@ footer {
 footer .inner {
   position: relative;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  justify-content: flex-start;
   padding: 0;
   color: #9d9d9d;
 }
