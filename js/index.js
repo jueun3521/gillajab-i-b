@@ -3,19 +3,23 @@
 // 스크롤 시 상단으로 이동
 // 문서가 로드될 때 실행되는 함수
 $(function () {
-  // 스크롤 이벤트 처리
-  $(window).scroll(function () {
-    // 스크롤이 800 이상일 때
-    if ($(this).scrollTop() > 800) {
-      // 모달 요소들을 표시
-      $(".modal-top").fadeIn();
-      $(".modal").fadeIn();
-    } else {
-      // 모달 요소들을 숨김
-      $(".modal-top").fadeOut();
-      $(".modal").fadeOut();
+    // 초기 상태 설정
+    checkScrollPosition();
+    // 스크롤 이벤트 처리
+    $(window).scroll(function () {
+      // 스크롤 위치에 따라 모달 요소들 표시/숨김
+      checkScrollPosition();
+    });
+    // 함수: 스크롤 위치에 따라 모달 요소들 표시/숨김
+    function checkScrollPosition() {
+      if ($(window).scrollTop() > 800) {
+        $(".modal-top").fadeIn();
+        $(".floating-button").fadeIn();
+      } else {
+        $(".modal-top").fadeOut();
+        $(".floating-button").fadeOut();
+      }
     }
-  });
   // 모달 상단 버튼 클릭 시
   $(".modal-top").click(function () {
     // 페이지 상단으로 부드럽게 스크롤 이동
@@ -26,28 +30,6 @@ $(function () {
       400 // 애니메이션 속도 (400 milliseconds)
     );
     return false; // 이벤트 전파 방지
-  });
-});
-// 수동스크롤할때 각섹션에 도착했을때 모달메뉴의 섹상 변경
-$(document).ready(function () {
-  $(window).scroll(function () {
-    // Get the scroll position with a slight offset
-    var scrollPos = $(this).scrollTop() + 50; // Adjust the offset as needed
-
-    // Iterate through each section and determine the active section
-    $("section").each(function () {
-      var sectionOffset = $(this).offset().top;
-      var sectionHeight = $(this).outerHeight();
-
-      if (
-        scrollPos >= sectionOffset &&
-        scrollPos < sectionOffset + sectionHeight
-      ) {
-        var targetId = $(this).attr("id");
-        $(".modal-menu a").removeClass("active");
-        $('.modal-menu a[href="#' + targetId + '"]').addClass("active");
-      }
-    });
   });
 });
 // ==============================================================================
@@ -69,6 +51,17 @@ window.addEventListener("load", function () {
       console.error("Target element not found");
     }
   }
+    // 모달
+    const floatingButton = document.querySelector('.floating-button');
+    const triggerButton = floatingButton.querySelector('.trigger');
+    const options = floatingButton.querySelector('.options');
+    let isExpanded = false;
+    function expandOptions() {
+      isExpanded = !isExpanded;
+      options.classList.toggle('expanded', isExpanded);
+    }
+  triggerButton.addEventListener('click', expandOptions);
+  
   // 헤더바 스크롤시 색강 변경
   document.addEventListener("scroll", function () {
     var navbar = document.getElementById("navbar");
@@ -106,13 +99,13 @@ window.addEventListener("load", function () {
     }
   });
   // =============================================
-// 모바일 메뉴버튼 기능
-const menuToggleBtn = document.getElementById("menuToggleBtn");
-const mobileMenubox = document.getElementById("mobile-menu-box");
-menuToggleBtn.addEventListener("click", function () {
-  // Toggle the 'active' class to show/hide the mobile menu
-  mobileMenubox.classList.toggle("active");
-});
+  // 모바일 메뉴버튼 기능
+  const menuToggleBtn = document.getElementById("menuToggleBtn");
+  const mobileMenubox = document.getElementById("mobile-menu-box");
+  menuToggleBtn.addEventListener("click", function () {
+    // Toggle the 'active' class to show/hide the mobile menu
+    mobileMenubox.classList.toggle("active");
+  });
   // ===================================================
   // ==============================================================
   // 비주얼 슬라이드
@@ -291,7 +284,7 @@ menuToggleBtn.addEventListener("click", function () {
         slidesPerView: 1,
         spaceBetween: 10,
       },
-    }
+    },
     // direction: getDirection(),
     // // navigation: {
     // //   nextEl: '.swiper-button-next',
