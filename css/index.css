@@ -1771,6 +1771,7 @@ header .inner {
   width: 15.625vw;
   font-weight: 600;
   font-size: 1.0417vw;
+  cursor: pointer;
   /* white-space : nowrap; */
 }
 @media all and (max-width: 1000px) {
