@@ -28,7 +28,26 @@ window.addEventListener("load", function () {
     
         var accordion = new Accordion($("#accordion"), false);
     });
-    
+        // 헤더
+        const navbarBurger = document.querySelector('.navbar_burger');
+        const navbarburgerback = document.querySelector('.navbar_burger_back');
+        const navbarMenu = document.querySelector('.navbar_menu');
+        const navbarOverlay = document.querySelector('.navbar_overlay');
+      
+        navbarBurger.addEventListener('click', () => {
+          navbarMenu.classList.toggle('active');
+          navbarOverlay.classList.toggle('active');
+        });
+      
+        navbarburgerback.addEventListener('click', () => {
+          navbarMenu.classList.remove('active');
+          navbarOverlay.classList.remove('active');
+        });
+      
+        navbarOverlay.addEventListener('click', () => {
+          navbarMenu.classList.remove('active');
+          navbarOverlay.classList.remove('active');
+        });
     
     let announcement = document.querySelector(".announcement a");
     let reviewBtn = document.querySelector(".review-btn a");
@@ -184,12 +203,4 @@ clearBtn.addEventListener("click", function () {
     addPostToDOM(post);
     }
 });
-
-    // 헤더
-    const menuToggleBtn = document.getElementById("menuToggleBtn");
-    const mobileMenubox = document.getElementById("mobile-menu-box");
-    menuToggleBtn.addEventListener("click", function () {
-    // Toggle the 'active' class to show/hide the mobile menu
-    mobileMenubox.classList.toggle("active");
-    });
     });
