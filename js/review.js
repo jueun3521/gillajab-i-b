@@ -87,9 +87,7 @@ window.addEventListener("load", function () {
     const writeBtn = document.querySelector(".write-btn")
     const postForm = document.querySelector(".post-form")
     const postTitleInput = document.getElementById("postTitle");
-    const postContentInput = document.getElementById("postContent");
     const postImageInput = document.getElementById("postImage");
-    const addPostBtn = document.getElementById("addPostBtn");
     const postList = document.getElementById("postList");
     const postDateInput = document.getElementById("postDate"); // Add this line
     const searchInput = document.getElementById("searchInput");

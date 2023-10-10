@@ -716,24 +716,7 @@ header .inner {
   color: #34c987;
   transition: linear 0.3s;
 }
-@media all and (max-width: 1625px) {
-  /* .modal {
-    width: 550px;
-    position: fixed;
-    top: 107%;
-    left: 37%;
-  }
-  .modal-menu {
-    width: 550px;
-  }
-  .modal-menu li {
-    float: left;
-    width: 110px;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-  } */
-}
+
 @media all and (max-width: 1500px) {
   .introduce .inner {
     gap: 2%;
@@ -932,6 +915,10 @@ header .inner {
   .introduce-txt > p {
     font-size: 20px;
   }
+  .introduce-txt > a {
+    display: block;
+    margin-top: 4%;
+  }
   .introduce-txt > a > p {
     font-size: 21px;
   }
@@ -1018,7 +1005,7 @@ header .inner {
   }
 
   .introduce-txt h2 {
-    font-size: 40px;
+    font-size: 8.3333vw;
     margin-bottom: 0;
   }
   .introduce-txt > p {
