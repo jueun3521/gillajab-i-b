@@ -3,23 +3,23 @@
 // 스크롤 시 상단으로 이동
 // 문서가 로드될 때 실행되는 함수
 $(function () {
-    // 초기 상태 설정
+  // 초기 상태 설정
+  checkScrollPosition();
+  // 스크롤 이벤트 처리
+  $(window).scroll(function () {
+    // 스크롤 위치에 따라 모달 요소들 표시/숨김
     checkScrollPosition();
-    // 스크롤 이벤트 처리
-    $(window).scroll(function () {
-      // 스크롤 위치에 따라 모달 요소들 표시/숨김
-      checkScrollPosition();
-    });
-    // 함수: 스크롤 위치에 따라 모달 요소들 표시/숨김
-    function checkScrollPosition() {
-      if ($(window).scrollTop() > 800) {
-        $(".modal-top").fadeIn();
-        $(".floating-button").fadeIn();
-      } else {
-        $(".modal-top").fadeOut();
-        $(".floating-button").fadeOut();
-      }
+  });
+  // 함수: 스크롤 위치에 따라 모달 요소들 표시/숨김
+  function checkScrollPosition() {
+    if ($(window).scrollTop() > 800) {
+      $(".modal-top").fadeIn();
+      $(".floating-button").fadeIn();
+    } else {
+      $(".modal-top").fadeOut();
+      $(".floating-button").fadeOut();
     }
+  }
   // 모달 상단 버튼 클릭 시
   $(".modal-top").click(function () {
     // 페이지 상단으로 부드럽게 스크롤 이동
@@ -51,17 +51,17 @@ window.addEventListener("load", function () {
       console.error("Target element not found");
     }
   }
-    // 모달
-    const floatingButton = document.querySelector('.floating-button');
-    const triggerButton = floatingButton.querySelector('.trigger');
-    const options = floatingButton.querySelector('.options');
-    let isExpanded = false;
-    function expandOptions() {
-      isExpanded = !isExpanded;
-      options.classList.toggle('expanded', isExpanded);
-    }
-  triggerButton.addEventListener('click', expandOptions);
-  
+  // 모달
+  const floatingButton = document.querySelector(".floating-button");
+  const triggerButton = floatingButton.querySelector(".trigger");
+  const options = floatingButton.querySelector(".options");
+  let isExpanded = false;
+  function expandOptions() {
+    isExpanded = !isExpanded;
+    options.classList.toggle("expanded", isExpanded);
+  }
+  triggerButton.addEventListener("click", expandOptions);
+
   // 헤더바 스크롤시 색강 변경
   document.addEventListener("scroll", function () {
     var navbar = document.getElementById("navbar");
@@ -100,11 +100,24 @@ window.addEventListener("load", function () {
   });
   // =============================================
   // 모바일 메뉴버튼 기능
-  const menuToggleBtn = document.getElementById("menuToggleBtn");
-  const mobileMenubox = document.getElementById("mobile-menu-box");
-  menuToggleBtn.addEventListener("click", function () {
-    // Toggle the 'active' class to show/hide the mobile menu
-    mobileMenubox.classList.toggle("active");
+  const navbarBurger = document.querySelector(".navbar_burger");
+  const navbarburgerback = document.querySelector(".navbar_burger_back");
+  const navbarMenu = document.querySelector(".navbar_menu");
+  const navbarOverlay = document.querySelector(".navbar_overlay");
+
+  navbarBurger.addEventListener("click", () => {
+    navbarMenu.classList.toggle("active");
+    navbarOverlay.classList.toggle("active");
+  });
+
+  navbarburgerback.addEventListener("click", () => {
+    navbarMenu.classList.remove("active");
+    navbarOverlay.classList.remove("active");
+  });
+
+  navbarOverlay.addEventListener("click", () => {
+    navbarMenu.classList.remove("active");
+    navbarOverlay.classList.remove("active");
   });
   // ===================================================
   // ==============================================================
@@ -239,14 +252,14 @@ window.addEventListener("load", function () {
     centeredSlides: true,
     loop: true,
     autoplay: {
-      delay: 2500, // 3초마다 자동 슬라이딩
+      delay: 2000, // 3초마다 자동 슬라이딩
       disableOnInteraction: false,
     },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
     },
-    speed: 800, // 슬라이드 이동 속도 (밀리초)
+    speed: 900, // 슬라이드 이동 속도 (밀리초)
     grabCursor: true, // 마우스 커서를 손가락 모양으로 변경
     // preventInteractionOnTransition: true, // 슬라이딩 중에 사용자의 상호 작용을 방지하여 끊김 없는 슬라이딩
     pagination: {
