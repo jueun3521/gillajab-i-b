@@ -266,7 +266,15 @@ header .inner {
 .navbar.scrolled a {
   color: #000; /* Set the text color when scrolled */
 }
-/* 모바일메메뉴 */
+.navbar_burger{
+  display: none;
+}
+.navbar_menu{
+  display: none;
+}
+/* 헤더 반응형 */
+@media all and (max-width: 1000px) {
+  /* 모바일메메뉴 */
 .navbar_overlay {
   position: fixed;
   top: 0;
@@ -286,7 +294,7 @@ header .inner {
   right: 1rem;
   cursor: pointer;
   color: #34c987;
-  display: none;
+  display: block;
 }
 .navbar_burger_back {
   position: fixed;
@@ -327,11 +335,6 @@ header .inner {
   opacity: 1;
   pointer-events: auto;
 }
-/* 헤더 반응형 */
-@media all and (max-width: 1000px) {
-  .navbar_burger{
-    display: block;
-  }
   .floating-button {
     bottom: 9%;
   }
@@ -382,8 +385,6 @@ header .inner {
     padding: 1rem 0;
     margin: 1rem 0;
   }
-}
-@media all and (max-width: 330px) {
 }
 @media all and (max-width: 320px) {
   .logo h1 {
@@ -1005,11 +1006,11 @@ header .inner {
   }
 
   .introduce-txt h2 {
-    font-size: 8.3333vw;
+    font-size: 7.2917vw;
     margin-bottom: 0;
   }
   .introduce-txt > p {
-    font-size: 16px;
+    font-size: 3.3333vw;
     line-height: 1.3;
   }
   .introduce-txt > a > p {
@@ -1024,7 +1025,7 @@ header .inner {
     height: 25%;
     left: 0;
     object-fit: cover;
-    top: 35%;
+    top: 37%;
     border-radius: 30px;
   }
   .service02 {
@@ -1256,11 +1257,16 @@ header .inner {
 @media all and (max-width: 480px) {
   .bg > div p span {
     /* font-size: 30px; */
-    font-size: 6.25vw;
+    font-size: 7.55vw;
   }
   .bg > div p {
-    font-size: 18px;
+    font-size: 3.75vw;
     width: 450px;
+    line-height: 1.3
+  }
+  .bg01 > p {
+    line-height: 1.2;
+    font-size: 6.85vw;
   }
 }
 @media all and (max-width: 425px) {
@@ -1278,13 +1284,13 @@ header .inner {
     font-size: 12px;
   }
 }
-@media all and (max-width: 375px) {
+@media all and (max-width: 380px) {
   .bg > div p span {
-    font-size: 23px;
+    font-size: 6.0526vw;
   }
   .bg > div p {
-    font-size: 14px;
-    width: 330px;
+    font-size: 3.6842vw;
+    width: 86.8421vw;
   }
 }
 @media all and (max-width: 320px) {
@@ -1466,7 +1472,29 @@ header .inner {
     line-height: 40px;
   }
 }
-
+@media all and (max-width: 559px) {
+  .service01 span {
+    text-align: center;
+  }
+  .service02 span {
+    text-align: center;
+  }
+}
+@media all and (max-width: 480px) {
+  .app-service-txt p {
+    font-size: 6.25vw;
+    line-height: 1.3;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+}
+@media all and (max-width: 380px) {
+  .app-service-txt p {
+    font-size: 6.5789vw;
+    line-height: 1.3;
+    margin-bottom: 5%;
+  }
+}
 /* ============================================================= */
 /* 이용후기 */
 .review {
@@ -1648,24 +1676,53 @@ header .inner {
   }
 }
 @media all and (max-width: 480px) {
+  .review-txt{
+    margin-top: 15%;
+  }
+  /* .reviewswiper .swiper-slide {
+    height: 70%;
+  }
+  .reviewswiper {
+    height: 70%;
+  }
+  .review-sw {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 83.3333vw;
+    padding-top: 0;
+  } */
   .review h2 {
     font-size: 6.25vw;
     margin-top: 15%;
-    text-align: center;
+    margin: 30%;
+    margin: 0 5%;
   }
   .review p {
-    font-size: 3.3333vw;
-    text-align: center;
+    font-size: 2.9333vw;
+    font-weight: 400;
+    padding-top: 5%;
+    margin-left: 5%;
   }
   .review-more {
     top: 72%;
     right: 1%;
+        margin-top: 1%;
+    width: 90%;
+    height: 18.75vw;
   }
+  
   .review-more a {
-    font-size: 12px;
+    display: block;
+    font-size: 3.5417vw;
+    text-align: center;
+    line-height: 9.375vw;
+    width: 100%;
+    margin: 0 auto;
   }
   .review .inner {
     align-content: flex-start;
+    gap: 5%;
   }
 }
 @media all and (max-width: 400px) {
@@ -1677,13 +1734,26 @@ header .inner {
   }
 }
 @media all and (max-width: 380px) {
+  .review .inner{
+    gap: 5%;
+  }
+  .reviewswiper .swiper-slide img {
+    margin-top: 20px;
+  }
+  .review-txt{
+    margin-top: 10%;
+  }
   .review-sw {
     position: relative;
     overflow: hidden;
-    padding-top: 5%;
-    margin-top: 10%;
+    padding-top: 0%;
+    margin-top: 5%;
     width: 100%;
     height: 40%;
+  }
+  .review-more {
+    top: 85%;
+
   }
   .review-txt {
     width: 90%;
