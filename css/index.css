@@ -1446,10 +1446,11 @@ header .inner {
   }
 
   .app-service-txt p {
-    font-size: 40px;
+    font-size: 35px;
     padding-top: 10%;
-    margin-top: 10%;
-    line-height: 50px;
+    margin-bottom: 7%;
+    line-height: 1.2;
+    margin-left: 5%;
   }
   .swiper-full-mobile .swiper-slide img {
     width: 80%;
@@ -1642,11 +1643,43 @@ header .inner {
   }
 }
 @media all and (max-width: 768px) {
-  .modal {
-    top: 110%;
-    left: 16%;
+  .review-more a {
+    font-size: 15px;
+    font-weight: 400;
+    color: #34c987;
+    margin-right: 5%;
+}
+  .review p {
+    font-size: 2.3121vw;
+    margin-top: 3%;
+}
+  .review-txt {
+    margin-left: 5%;
+    width: 70%;
+}
+  .review .inner{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .review h2 {
+    font-size: 5.7803vw;
+    font-size: 35px;
+    line-height: 1.2;
+  }
+  .review-bt-box {
+    width: 90%;
+    margin: 10% auto;
+    margin-left: 5%;
+  }
+  .review-more {
+    margin-right: 5%;
+    white-space: nowrap;
   }
 }
+
 @media all and (max-width: 600px) {
   .modal {
     top: 110%;
